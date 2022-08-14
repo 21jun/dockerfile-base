@@ -4,4 +4,4 @@ RUN useradd -ms /bin/bash lee1jun
 
 RUN apt-get update;apt-get -y install openssh-server;apt-get -y install vim
 
-RUN service ssh start
+CMD service ssh start
