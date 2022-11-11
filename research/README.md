@@ -12,3 +12,20 @@ docker attach LEMON
 service ssh start
 passwd lee1jun 
 ```
+
+
+# Matching UID and GID for container user
+
+1. check UID/GID for user at host.
+2. config UID/GID inside container
+
+host
+```
+id
+>>> uid=1001(lee1jun) gid=1001(lee1jun) groups=1001(lee1jun),999(docker)
+```
+container (as root)
+```
+usermod -u 1001 lee1jun
+groupmod -g 1001 lee1jun
+```
