@@ -4,4 +4,9 @@ RUN useradd -ms /bin/bash lee1jun
 
 RUN apt-get update;apt-get -y install openssh-server;apt-get -y install vim
 
-CMD service ssh start
+RUN mkdir /config
+ADD auto-ssh.sh /config
+WORKDIR /config
+RUN mkdir /home/lee1jun/.ssh
+RUN sh auto-ssh.sh
+
