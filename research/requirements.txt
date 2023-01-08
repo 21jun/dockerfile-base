@@ -1,0 +1,6 @@
+jiwer
+evaluate
+datasets
+transformers
+kenlm
+pyctcdecode
