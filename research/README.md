@@ -29,3 +29,10 @@ container (as root)
 usermod -u 1001 lee1jun
 groupmod -g 1001 lee1jun
 ```
+
+
+
+# Install Anaconda
+```
+wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh
+```
